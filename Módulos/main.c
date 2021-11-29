@@ -2,19 +2,22 @@
 #include <stdlib.h>
 #include <locale.h>
 void calcula();
+int valorN;
+float controle;
 int main()
 {
     setlocale(LC_ALL,"portuguese");
-    calcula();
+    printf("(EX3)Diga o valor de N\n");
+    scanf ("%d",&valorN);
+    calcula(valorN);
     return 0;
 }
 
 void calcula()
 {
-    int valorN,a=1,b=1,auxiliar,div;
-    float conta,controle=0;
-    printf("(EX2) Diga o valor de N\n");
-    scanf ("%d",&valorN);
+    int a=1,b=1,auxiliar,div;
+    float conta;
+
     for (int i=2; i<=valorN; i++){
         div= i*2;
         auxiliar = a + b;
@@ -34,3 +37,4 @@ void calcula()
     printf ("O valor é: %f",controle);
 
 }
+
